@@ -15,7 +15,7 @@
 <body class="p-4 p-sm-5">
 
   <div class="row">
-    <div class="col-sm-8 pe-2 pe-sm-5">
+    <div class="col-sm-8 pe-2 pe-sm-5" hidden>
       <h4> Latest Donations</h4>
 
       <table class="table table-striped">
@@ -30,12 +30,12 @@
 
     </div>
 
-    <div class="col-sm-4">
+    <div class="d-flex justidy-content-center">
       <div class="donation-box mt-md-4">
 
-        <div class="donation-box-head">
+        <div class="donation-box-head  px-5 py-5">
           <i class="logo"></i>
-          <h4> Donate to <label
+          <h4> Purchase <label
             for="beneficiary"
             data-behavior="beneficiary"
             style="color: var(--secondary); border-bottom: 2px solid var(--secondary);"
@@ -54,13 +54,21 @@
       
         <main class="signed-in-flow" class="donation-body" style="display: none">
           <div class="row">
-            <div class="col-3 px-1"><button class="btn btn-outline-primary" onclick="set_donation(10)"> 10 </button></div>
-            <div class="col-3 px-1"><button class="btn btn-outline-primary" onclick="set_donation(20)"> 20 </button></div>
-            <div class="col-3 px-1"><button class="btn btn-outline-primary" onclick="set_donation(50)"> 50 </button></div>
-            <div class="col-3 px-1"><button class="btn btn-outline-primary" onclick="set_donation(100)"> 100 </button></div>
+            <div class="col-4 px-1"><button class="btn btn-outline-primary" id="purchase1" onclick=""> 
+              <div>Armors</div>
+              <div>50N</div>
+            </button></div>
+            <div class="col-4 px-1"><button class="btn btn-outline-primary" id="purchase2" onclick=""> 
+              <div>Weapons</div>
+              <div>50N</div>
+            </button></div>
+            <div class="col-4 px-1"><button class="btn btn-outline-primary" id="purchase3" onclick=""> 
+              <div>Soldier</div>
+              <div>100N</div>
+            </button></div>
           </div>
   
-          <form>
+          <form hidden>
             <fieldset id="fieldset">
               <label for="donation" class="form-label" >
                 Donation amount (in Ⓝ)
@@ -68,13 +76,13 @@
               <div class="input-group">
                 <input id="donation" class="form-control" data-behavior="donation" />
                 <span class="input-group-text">Ⓝ</span>
-                <button class="btn btn-primary" >Donate</button>
+                <button class="btn btn-primary" >Purchase</button>
               </div>
             </fieldset>
           </form>
         </main>
   
-        <button class="link signed-in-flow" style="display: none; float: right" id="sign-out-button">
+        <button class="link signed-in-flow" style="display: none; float: right;" id="sign-out-button">
           Sign out
         </button>
       </div>
